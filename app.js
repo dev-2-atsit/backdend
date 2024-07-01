@@ -11,6 +11,9 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 // import routes
 app.use("/route", route);
+app.use("/", (req, res) => {
+  res.send("Hello World");
+});
 app.use(error);
 module.exports = app;
 // npm i express cookie-parser body-parser bcryptjs
